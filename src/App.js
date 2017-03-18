@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import GameHeader from './components/game-header.js';
+import GameBoard from './components/game-board.js';
+import GameScore from './components/game-score.js';
+
+const score = 2094385
+const gameState = [
+  [null, 2, 4, 8],
+  [16, 32, 64, 128],
+  [256, 512, 1024, 2048],
+  [4096, 8192, null, null]
+];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <GameHeader />
+        <GameBoard gameState={gameState} />
+        <GameScore score={score} />
       </div>
     );
   }
