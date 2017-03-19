@@ -4,7 +4,7 @@ class GameScore extends React.Component {
   render () {
     return (
       <div className='game-score'>
-        {this.props.score}
+        {`Total Score: ${this.props.score}`}
       </div>
     );
   }
