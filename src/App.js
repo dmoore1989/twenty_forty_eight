@@ -4,21 +4,16 @@ import GameHeader from './components/game-header.js';
 import GameBoard from './components/game-board.js';
 import GameScore from './components/game-score.js';
 
-const score = 2094385
-const gameState = [
-  [null, 2, 4, 8],
-  [16, 32, 64, 128],
-  [256, 512, 1024, 2048],
-  [4096, 8192, null, null]
-];
 
 class App extends Component {
   render() {
+    let store = this.props.store
+
     return (
       <div className="App">
         <GameHeader />
-        <GameBoard gameState={gameState} />
-        <GameScore score={score} />
+        <GameBoard gameState={store.gameState} />
+        <GameScore score={store.score} />
       </div>
     );
   }
