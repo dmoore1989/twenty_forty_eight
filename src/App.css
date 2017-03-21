@@ -32,6 +32,10 @@
   text-shadow: -1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;
 }
 
+.mod-empty {
+  height: 25px;
+}
+
 .mod-2 {
   background-color: #ccc;
 }

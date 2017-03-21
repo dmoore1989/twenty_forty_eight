@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
-class GameScore extends React.Component {
-  render () {
-    return (
-      <div className='game-score'>
-        {`Total Score: ${this.props.score}`}
-      </div>
-    );
-  }
+const GameScore = ({updateBoard, gameState, score}) => {
+  return (
+    <div className='game-score'>
+      {`Total Score: ${score}`}
+      <button onClick={() => updateBoard(gameState)}>
+
+      </button>
+    </div>
+  );
 }
+
+
+GameScore.propTypes = {
+  updateBoard: PropTypes.func.isRequired,
+  score: PropTypes.number.isRequired
+}
+
 
 export default GameScore;
